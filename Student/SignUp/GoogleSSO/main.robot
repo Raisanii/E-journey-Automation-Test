@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Sign up with credential
+Documentation     Sign up with google sso
 Library           SeleniumLibrary
 Library           OperatingSystem
 Library           DateTime
@@ -12,7 +12,7 @@ ${Pass}=               Raisani.254
 ${username}=           testing
 
 *** Test Cases ***
-Sing in with sso
+SignUp with sso
     Open Browser       ${URL}    browser=chrome
     Maximize Browser Window
     Wait Until Page Contains    Welcome back! Please select method to sign in    timeout=10s
@@ -39,8 +39,8 @@ Click google sso
     Click Element                    xpath=//input[@type='email' and @name='identifier']
     Input Text                       xpath=//input[@type='email' and @name='identifier']    ${Email}
     Click Element                    xpath=//*[@id='identifierNext']
-    Wait Until Element Is Visible    xpath=//input[@type='password' and @name='Passwd']     timeout=5s
-    Input Password                   xpath=//input[@type='password' and @name='Passwd']      ${Pass}
+    Wait Until Element Is Visible    xpath=//input[@type='password' and @name='Passwd']     timeout=10s
+    Input Password                   xpath=//input[@type='password' and @name='Passwd']     ${Pass}
     Click Element                    xpath=//*[@id='passwordNext']
    
 
