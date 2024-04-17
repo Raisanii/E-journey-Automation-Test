@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240416 12:40:06.756" rpa="true" schemaversion="4">
+<suite id="s1" name="Main" source="D:\Primeskill\E-journey\Admin\login\main.robot">
+<test id="s1-t1" name="Login with incorrect credential" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240416 12:40:06.917" level="INFO">Opening browser 'chrome' to base url 'https://staging.admin.ejourney.id/auth/login'.</msg>
+<status status="PASS" starttime="20240416 12:40:06.917" endtime="20240416 12:40:09.505"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login Admin</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240416 12:40:09.505" endtime="20240416 12:40:09.521"/>
+</kw>
+<kw name="Do Log in with incorrect password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${Correct_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:09.521" level="INFO">Typing text 'admin@staging.id' into text field 'email'.</msg>
+<status status="PASS" starttime="20240416 12:40:09.521" endtime="20240416 12:40:09.643"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${Incorrect_pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:09.643" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20240416 12:40:09.667" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240416 12:40:09.707" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240416 12:40:09.643" endtime="20240416 12:40:09.707"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:09.707" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20240416 12:40:09.707" endtime="20240416 12:40:09.748"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:09.521" endtime="20240416 12:40:09.748"/>
+</kw>
+<kw name="Verify Login with in correct password">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<var>${Verify_login}</var>
+<arg>xpath=//p[text()='Login Failed!']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240416 12:40:10.912" level="INFO">${Verify_login} = None</msg>
+<status status="PASS" starttime="20240416 12:40:09.748" endtime="20240416 12:40:10.912"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Verify_login}' == 'True'</arg>
+<arg>Log</arg>
+<arg>Passed</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Failed</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Failed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240416 12:40:10.912" level="INFO">Failed</msg>
+<status status="PASS" starttime="20240416 12:40:10.912" endtime="20240416 12:40:10.912"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:10.912" endtime="20240416 12:40:10.912"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240416 12:40:12.913" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240416 12:40:10.912" endtime="20240416 12:40:12.914"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:09.748" endtime="20240416 12:40:12.914"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240416 12:40:13.083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240416 12:40:12.916" endtime="20240416 12:40:13.083"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:06.917" endtime="20240416 12:40:13.083"/>
+</test>
+<test id="s1-t2" name="Login with correct credential" line="20">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login Admin</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240416 12:40:13.091" endtime="20240416 12:40:13.099"/>
+</kw>
+<kw name="Do Log in with correct credential">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${Correct_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:13.099" level="INFO">Typing text 'admin@staging.id' into text field 'email'.</msg>
+<status status="PASS" starttime="20240416 12:40:13.099" endtime="20240416 12:40:13.199"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${Correct_pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:13.199" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20240416 12:40:13.222" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240416 12:40:13.273" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240416 12:40:13.199" endtime="20240416 12:40:13.273"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240416 12:40:13.273" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20240416 12:40:13.273" endtime="20240416 12:40:13.302"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:13.099" endtime="20240416 12:40:13.302"/>
+</kw>
+<kw name="Verify Login with correct credential">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<var>${Verify_login}</var>
+<arg>xpath=//p[text()='Login Success!']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240416 12:40:13.993" level="INFO">${Verify_login} = None</msg>
+<status status="PASS" starttime="20240416 12:40:13.305" endtime="20240416 12:40:13.993"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Verify_login}' == 'True'</arg>
+<arg>Log</arg>
+<arg>Passed</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Failed</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Failed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240416 12:40:13.993" level="INFO">Failed</msg>
+<status status="PASS" starttime="20240416 12:40:13.993" endtime="20240416 12:40:13.993"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:13.993" endtime="20240416 12:40:13.993"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240416 12:40:15.997" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240416 12:40:13.993" endtime="20240416 12:40:15.997"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:13.305" endtime="20240416 12:40:15.999"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240416 12:40:16.161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240416 12:40:15.999" endtime="20240416 12:40:16.161"/>
+</kw>
+<status status="PASS" starttime="20240416 12:40:13.083" endtime="20240416 12:40:16.161"/>
+</test>
+<doc>Login Admin</doc>
+<status status="PASS" starttime="20240416 12:40:06.756" endtime="20240416 12:40:16.161"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
