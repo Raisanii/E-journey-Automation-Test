@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240417 22:05:00.727" rpa="false" schemaversion="4">
+<suite id="s1" name="Main" source="D:\primeskill\e-journey\student\signup\googlesso\main.robot">
+<test id="s1-t1" name="Sing in with sso" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240417 22:05:00.896" level="INFO">Opening browser 'chrome' to base url 'https://staging.auth.app.ejourney.id/'.</msg>
+<status status="PASS" starttime="20240417 22:05:00.895" endtime="20240417 22:05:05.226"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240417 22:05:05.226" endtime="20240417 22:05:05.355"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome back! Please select method to sign in</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240417 22:05:05.356" endtime="20240417 22:05:05.381"/>
+</kw>
+<kw name="Move to signUp page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:05.383" level="INFO">Clicking element 'xpath=//a[text()='Sign up']'.</msg>
+<status status="PASS" starttime="20240417 22:05:05.382" endtime="20240417 22:05:05.443"/>
+</kw>
+<status status="PASS" starttime="20240417 22:05:05.381" endtime="20240417 22:05:05.443"/>
+</kw>
+<kw name="Click google sso">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:05.445" level="INFO">Clicking element 'xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']'.</msg>
+<status status="PASS" starttime="20240417 22:05:05.444" endtime="20240417 22:05:07.088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240417 22:05:07.088" endtime="20240417 22:05:07.112"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:07.113" level="INFO">Clicking element 'xpath=//input[@type='email' and @name='identifier']'.</msg>
+<status status="PASS" starttime="20240417 22:05:07.112" endtime="20240417 22:05:07.161"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:07.162" level="INFO">Typing text 'testing.s4n1@gmail.com' into text field 'xpath=//input[@type='email' and @name='identifier']'.</msg>
+<status status="PASS" starttime="20240417 22:05:07.161" endtime="20240417 22:05:07.264"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id='identifierNext']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:07.264" level="INFO">Clicking element 'xpath=//*[@id='identifierNext']'.</msg>
+<status status="PASS" starttime="20240417 22:05:07.264" endtime="20240417 22:05:07.418"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@type='password' and @name='Passwd']</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240417 22:05:07.418" endtime="20240417 22:05:10.818"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@type='password' and @name='Passwd']</arg>
+<arg>${Pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:10.820" level="INFO">Typing password into text field 'xpath=//input[@type='password' and @name='Passwd']'.</msg>
+<msg timestamp="20240417 22:05:10.919" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240417 22:05:10.997" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240417 22:05:10.819" endtime="20240417 22:05:10.997"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id='passwordNext']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:10.998" level="INFO">Clicking element 'xpath=//*[@id='passwordNext']'.</msg>
+<status status="PASS" starttime="20240417 22:05:10.998" endtime="20240417 22:05:11.081"/>
+</kw>
+<status status="PASS" starttime="20240417 22:05:05.444" endtime="20240417 22:05:11.081"/>
+</kw>
+<kw name="Verify signUp">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome back! Please select method to sign in</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240417 22:05:11.082" endtime="20240417 22:05:14.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240417 22:05:14.257" level="INFO">Clicking element 'xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']'.</msg>
+<status status="PASS" starttime="20240417 22:05:14.256" endtime="20240417 22:05:15.899"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>timeout=60s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240417 22:05:15.899" endtime="20240417 22:05:29.845"/>
+</kw>
+<status status="PASS" starttime="20240417 22:05:11.082" endtime="20240417 22:05:29.845"/>
+</kw>
+<kw name="Do Screenshot">
+<kw name="Get Current Date" library="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%d%m%Y_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240417 22:05:29.847" level="INFO">${timestamp} = 17042024_220529</msg>
+<status status="PASS" starttime="20240417 22:05:29.847" endtime="20240417 22:05:29.847"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_path}</var>
+<arg>\images</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240417 22:05:29.847" level="INFO">${screenshot_path} = images</msg>
+<status status="PASS" starttime="20240417 22:05:29.847" endtime="20240417 22:05:29.847"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_filename}</var>
+<arg>screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240417 22:05:29.849" level="INFO">${screenshot_filename} = screenshot_17042024_220529.png</msg>
+<status status="PASS" starttime="20240417 22:05:29.849" endtime="20240417 22:05:29.849"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshot_path}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240417 22:05:29.849" endtime="20240417 22:05:29.851"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${screenshot_filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240417 22:05:30.260" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_17042024_220529.png"&gt;&lt;img src="images/screenshot_17042024_220529.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240417 22:05:29.851" endtime="20240417 22:05:30.260"/>
+</kw>
+<status status="PASS" starttime="20240417 22:05:29.846" endtime="20240417 22:05:30.260"/>
+</kw>
+<status status="PASS" starttime="20240417 22:05:00.895" endtime="20240417 22:05:30.262"/>
+</test>
+<doc>Sign up with credential</doc>
+<status status="PASS" starttime="20240417 22:05:00.728" endtime="20240417 22:05:30.265"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
