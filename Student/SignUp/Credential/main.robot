@@ -133,7 +133,7 @@ Do SignUp with correct credential
     Sleep    3s
     Do Screenshot
 Verify SignUp with correct credential
-    Wait Until Page Contains      Kirana    timeout=60s
+    Wait Until Page Contains      Kirana    timeout=30s
     ${Verify_signup}   Wait Until Page Contains  Kirana    timeout=30s
     Run Keyword If    '${Verify_signup}' == 'True'
     ...    Log   Passed. User successfully Create account

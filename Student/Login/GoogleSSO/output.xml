@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240419 00:38:42.435" rpa="false" schemaversion="4">
+<suite id="s1" name="Main" source="D:\Primeskill\E-journey\Student\login\googlesso\main.robot">
+<test id="s1-t1" name="Login with sso" line="14">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240419 00:38:42.632" level="INFO">Opening browser 'chrome' to base url 'https://staging.auth.app.ejourney.id/'.</msg>
+<status status="PASS" starttime="20240419 00:38:42.632" endtime="20240419 00:38:46.077"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240419 00:38:46.078" endtime="20240419 00:38:46.193"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome back! Please select method to sign in</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240419 00:38:46.193" endtime="20240419 00:38:46.212"/>
+</kw>
+<kw name="Click google sso">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:46.218" level="INFO">Clicking element 'xpath=//a[contains(@class, 'btn-google') and @href='https://staging.api.ejourney.id/auth-service/auth/google/redirect']'.</msg>
+<status status="PASS" starttime="20240419 00:38:46.216" endtime="20240419 00:38:47.611"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240419 00:38:47.611" endtime="20240419 00:38:47.643"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:47.643" level="INFO">Clicking element 'xpath=//input[@type='email' and @name='identifier']'.</msg>
+<status status="PASS" starttime="20240419 00:38:47.643" endtime="20240419 00:38:47.686"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@type='email' and @name='identifier']</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:47.686" level="INFO">Typing text 'testing.s4n1@gmail.com' into text field 'xpath=//input[@type='email' and @name='identifier']'.</msg>
+<status status="PASS" starttime="20240419 00:38:47.686" endtime="20240419 00:38:47.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id='identifierNext']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:47.787" level="INFO">Clicking element 'xpath=//*[@id='identifierNext']'.</msg>
+<status status="PASS" starttime="20240419 00:38:47.787" endtime="20240419 00:38:47.922"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@type='password' and @name='Passwd']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240419 00:38:47.922" endtime="20240419 00:38:51.859"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@type='password' and @name='Passwd']</arg>
+<arg>${Pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:51.859" level="INFO">Typing password into text field 'xpath=//input[@type='password' and @name='Passwd']'.</msg>
+<msg timestamp="20240419 00:38:51.913" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240419 00:38:52.019" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240419 00:38:51.859" endtime="20240419 00:38:52.019"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id='passwordNext']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240419 00:38:52.019" level="INFO">Clicking element 'xpath=//*[@id='passwordNext']'.</msg>
+<status status="PASS" starttime="20240419 00:38:52.019" endtime="20240419 00:38:52.239"/>
+</kw>
+<status status="PASS" starttime="20240419 00:38:46.215" endtime="20240419 00:38:52.239"/>
+</kw>
+<kw name="Verify Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Kirana</arg>
+<arg>timeout=60s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240419 00:38:52.243" endtime="20240419 00:38:58.041"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<var>${Verify_signup}</var>
+<arg>Kirana</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20240419 00:38:58.051" level="INFO">${Verify_signup} = None</msg>
+<status status="PASS" starttime="20240419 00:38:58.042" endtime="20240419 00:38:58.051"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Verify_signup}' == 'True'</arg>
+<arg>Log</arg>
+<arg>Passed. User successfully Create account</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Failed create accoount</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Failed create accoount</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240419 00:38:58.051" level="INFO">Failed create accoount</msg>
+<status status="PASS" starttime="20240419 00:38:58.051" endtime="20240419 00:38:58.052"/>
+</kw>
+<status status="PASS" starttime="20240419 00:38:58.051" endtime="20240419 00:38:58.052"/>
+</kw>
+<status status="PASS" starttime="20240419 00:38:52.243" endtime="20240419 00:38:58.052"/>
+</kw>
+<kw name="Do Screenshot">
+<kw name="Get Current Date" library="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%d%m%Y_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240419 00:38:58.053" level="INFO">${timestamp} = 19042024_003858</msg>
+<status status="PASS" starttime="20240419 00:38:58.052" endtime="20240419 00:38:58.053"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_path}</var>
+<arg>\images</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240419 00:38:58.053" level="INFO">${screenshot_path} = images</msg>
+<status status="PASS" starttime="20240419 00:38:58.053" endtime="20240419 00:38:58.053"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_filename}</var>
+<arg>screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240419 00:38:58.053" level="INFO">${screenshot_filename} = screenshot_19042024_003858.png</msg>
+<status status="PASS" starttime="20240419 00:38:58.053" endtime="20240419 00:38:58.053"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshot_path}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240419 00:38:58.053" endtime="20240419 00:38:58.055"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${screenshot_filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240419 00:38:58.541" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_003858.png"&gt;&lt;img src="images/screenshot_19042024_003858.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240419 00:38:58.055" endtime="20240419 00:38:58.541"/>
+</kw>
+<status status="PASS" starttime="20240419 00:38:58.052" endtime="20240419 00:38:58.541"/>
+</kw>
+<status status="PASS" starttime="20240419 00:38:42.632" endtime="20240419 00:38:58.541"/>
+</test>
+<doc>Login with google sso</doc>
+<status status="PASS" starttime="20240419 00:38:42.437" endtime="20240419 00:38:58.556"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
