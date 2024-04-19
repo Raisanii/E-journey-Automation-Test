@@ -16,13 +16,9 @@ Login with correct credential
     Wait Until Page Contains    Welcome back! Please select method to sign in    timeout=10s
     Do login with correct credential
     Verify login
-    Do Screenshot
 
-Logout 
-    Open Browser        ${URL}    browser=chrome
-    Maximize Browser Window
-    Wait Until Page Contains    Welcome back! Please select method to sign in    timeout=10s
-
+Redirect to profile page 
+    
 *** Keywords ***
 Do Screenshot
     ${timestamp}=              Get Current Date    result_format=%d%m%Y_%H%M%S
