@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240419 08:30:03.564" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.8.0 on win32)" generated="20240419 09:42:20.826" rpa="false" schemaversion="4">
 <suite id="s1" name="Main" source="D:\Primeskill\E-journey\Student\login\forgetpass\main.robot">
 <test id="s1-t1" name="Forget pass with missing email" line="14">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240419 08:30:03.748" level="INFO">Opening browser 'chrome' to base url 'https://staging.auth.app.ejourney.id/'.</msg>
-<status status="PASS" starttime="20240419 08:30:03.747" endtime="20240419 08:30:08.680"/>
+<msg timestamp="20240419 09:42:21.030" level="INFO">Opening browser 'chrome' to base url 'https://staging.auth.app.ejourney.id/'.</msg>
+<status status="PASS" starttime="20240419 09:42:21.030" endtime="20240419 09:42:25.820"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240419 08:30:08.680" endtime="20240419 08:30:08.798"/>
+<status status="PASS" starttime="20240419 09:42:25.822" endtime="20240419 09:42:25.954"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Welcome back! Please select method to sign in</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:08.799" endtime="20240419 08:30:08.824"/>
+<status status="PASS" starttime="20240419 09:42:25.954" endtime="20240419 09:42:25.981"/>
 </kw>
 <kw name="Do forget pass with missing email">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@href='#'][text()='Forgot Password ?']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:08.828" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
-<status status="PASS" starttime="20240419 08:30:08.827" endtime="20240419 08:30:08.934"/>
+<msg timestamp="20240419 09:42:25.981" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
+<status status="PASS" starttime="20240419 09:42:25.981" endtime="20240419 09:42:26.076"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Reset password link will be sent to your email Please enter your email</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:08.935" endtime="20240419 08:30:08.950"/>
+<status status="PASS" starttime="20240419 09:42:26.076" endtime="20240419 09:42:26.090"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[text()='Reset Your Password']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:08.950" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
-<status status="PASS" starttime="20240419 08:30:08.950" endtime="20240419 08:30:09.038"/>
+<msg timestamp="20240419 09:42:26.090" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
+<status status="PASS" starttime="20240419 09:42:26.090" endtime="20240419 09:42:26.146"/>
 </kw>
 <kw name="Wait Until Element Contains" library="SeleniumLibrary">
 <arg>xpath=//div[@class='form-group']//input[@placeholder='Type your email' and @type='email' and @class='form-control' and @required='']/following-sibling::div[@class='invalid-feedback' and text()='Email is required']</arg>
 <arg>Email is required</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20240419 08:30:09.038" endtime="20240419 08:30:09.069"/>
+<status status="PASS" starttime="20240419 09:42:26.146" endtime="20240419 09:42:26.183"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:08.824" endtime="20240419 08:30:09.069"/>
+<status status="PASS" starttime="20240419 09:42:25.981" endtime="20240419 09:42:26.183"/>
 </kw>
 <kw name="Do Screenshot">
 <kw name="Get Current Date" library="DateTime">
 <var>${timestamp}</var>
 <arg>result_format=%d%m%Y_%H%M%S</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240419 08:30:09.069" level="INFO">${timestamp} = 19042024_083009</msg>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.069"/>
+<msg timestamp="20240419 09:42:26.185" level="INFO">${timestamp} = 19042024_094226</msg>
+<status status="PASS" starttime="20240419 09:42:26.184" endtime="20240419 09:42:26.185"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_path}</var>
 <arg>\images</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:09.069" level="INFO">${screenshot_path} = images</msg>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.069"/>
+<msg timestamp="20240419 09:42:26.185" level="INFO">${screenshot_path} = images</msg>
+<status status="PASS" starttime="20240419 09:42:26.185" endtime="20240419 09:42:26.185"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_filename}</var>
 <arg>screenshot_${timestamp}.png</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:09.069" level="INFO">${screenshot_filename} = screenshot_19042024_083009.png</msg>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.069"/>
+<msg timestamp="20240419 09:42:26.186" level="INFO">${screenshot_filename} = screenshot_19042024_094226.png</msg>
+<status status="PASS" starttime="20240419 09:42:26.186" endtime="20240419 09:42:26.186"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${screenshot_path}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.069"/>
+<status status="PASS" starttime="20240419 09:42:26.186" endtime="20240419 09:42:26.186"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <arg>${screenshot_filename}</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240419 08:30:09.401" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_083009.png"&gt;&lt;img src="images/screenshot_19042024_083009.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.401"/>
+<msg timestamp="20240419 09:42:26.538" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_094226.png"&gt;&lt;img src="images/screenshot_19042024_094226.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240419 09:42:26.186" endtime="20240419 09:42:26.538"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:09.069" endtime="20240419 08:30:09.401"/>
+<status status="PASS" starttime="20240419 09:42:26.183" endtime="20240419 09:42:26.538"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:03.738" endtime="20240419 08:30:09.401"/>
+<status status="PASS" starttime="20240419 09:42:21.030" endtime="20240419 09:42:26.538"/>
 </test>
 <test id="s1-t2" name="Forget pass with incorrect email" line="21">
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240419 08:30:09.408" endtime="20240419 08:30:09.812"/>
+<status status="PASS" starttime="20240419 09:42:26.554" endtime="20240419 09:42:26.956"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Welcome back! Please select method to sign in</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:09.812" endtime="20240419 08:30:09.844"/>
+<status status="PASS" starttime="20240419 09:42:26.956" endtime="20240419 09:42:26.974"/>
 </kw>
 <kw name="Do Forget pass with incorrect email">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@href='#'][text()='Forgot Password ?']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:09.849" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
-<status status="PASS" starttime="20240419 08:30:09.848" endtime="20240419 08:30:09.901"/>
+<msg timestamp="20240419 09:42:26.974" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
+<status status="PASS" starttime="20240419 09:42:26.974" endtime="20240419 09:42:27.032"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Reset password link will be sent to your email Please enter your email</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:09.901" endtime="20240419 08:30:09.910"/>
+<status status="PASS" starttime="20240419 09:42:27.033" endtime="20240419 09:42:27.044"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']</arg>
 <arg>${Incorrect-email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:09.910" level="INFO">Typing text 'aingmaung@gmail.com' into text field 'xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']'.</msg>
-<status status="PASS" starttime="20240419 08:30:09.910" endtime="20240419 08:30:10.000"/>
+<msg timestamp="20240419 09:42:27.044" level="INFO">Typing text 'aingmaung@gmail.com' into text field 'xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']'.</msg>
+<status status="PASS" starttime="20240419 09:42:27.044" endtime="20240419 09:42:27.154"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[text()='Reset Your Password']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:10.000" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
-<status status="PASS" starttime="20240419 08:30:10.000" endtime="20240419 08:30:10.046"/>
+<msg timestamp="20240419 09:42:27.154" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
+<status status="PASS" starttime="20240419 09:42:27.154" endtime="20240419 09:42:27.181"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Email is not registered, Please try again</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:10.047" endtime="20240419 08:30:11.160"/>
+<status status="PASS" starttime="20240419 09:42:27.181" endtime="20240419 09:42:28.053"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <var>${Verify}</var>
 <arg>Email is not registered, Please try again</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<msg timestamp="20240419 08:30:11.174" level="INFO">${Verify} = None</msg>
-<status status="PASS" starttime="20240419 08:30:11.160" endtime="20240419 08:30:11.174"/>
+<msg timestamp="20240419 09:42:28.057" level="INFO">${Verify} = None</msg>
+<status status="PASS" starttime="20240419 09:42:28.053" endtime="20240419 09:42:28.057"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${Verify}'=='True'</arg>
@@ -141,97 +141,97 @@
 <kw name="Log" library="BuiltIn">
 <arg>Failed</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240419 08:30:11.174" level="INFO">Failed</msg>
-<status status="PASS" starttime="20240419 08:30:11.174" endtime="20240419 08:30:11.174"/>
+<msg timestamp="20240419 09:42:28.068" level="INFO">Failed</msg>
+<status status="PASS" starttime="20240419 09:42:28.057" endtime="20240419 09:42:28.068"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:11.174" endtime="20240419 08:30:11.174"/>
+<status status="PASS" starttime="20240419 09:42:28.057" endtime="20240419 09:42:28.068"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:09.848" endtime="20240419 08:30:11.174"/>
+<status status="PASS" starttime="20240419 09:42:26.974" endtime="20240419 09:42:28.068"/>
 </kw>
 <kw name="Do Screenshot">
 <kw name="Get Current Date" library="DateTime">
 <var>${timestamp}</var>
 <arg>result_format=%d%m%Y_%H%M%S</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240419 08:30:11.177" level="INFO">${timestamp} = 19042024_083011</msg>
-<status status="PASS" starttime="20240419 08:30:11.177" endtime="20240419 08:30:11.177"/>
+<msg timestamp="20240419 09:42:28.068" level="INFO">${timestamp} = 19042024_094228</msg>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.068"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_path}</var>
 <arg>\images</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:11.178" level="INFO">${screenshot_path} = images</msg>
-<status status="PASS" starttime="20240419 08:30:11.177" endtime="20240419 08:30:11.178"/>
+<msg timestamp="20240419 09:42:28.068" level="INFO">${screenshot_path} = images</msg>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.068"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_filename}</var>
 <arg>screenshot_${timestamp}.png</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:11.178" level="INFO">${screenshot_filename} = screenshot_19042024_083011.png</msg>
-<status status="PASS" starttime="20240419 08:30:11.178" endtime="20240419 08:30:11.178"/>
+<msg timestamp="20240419 09:42:28.068" level="INFO">${screenshot_filename} = screenshot_19042024_094228.png</msg>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.068"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${screenshot_path}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20240419 08:30:11.178" endtime="20240419 08:30:11.178"/>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.068"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <arg>${screenshot_filename}</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240419 08:30:11.408" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_083011.png"&gt;&lt;img src="images/screenshot_19042024_083011.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240419 08:30:11.178" endtime="20240419 08:30:11.408"/>
+<msg timestamp="20240419 09:42:28.356" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_094228.png"&gt;&lt;img src="images/screenshot_19042024_094228.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.356"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:11.174" endtime="20240419 08:30:11.408"/>
+<status status="PASS" starttime="20240419 09:42:28.068" endtime="20240419 09:42:28.356"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:09.407" endtime="20240419 08:30:11.408"/>
+<status status="PASS" starttime="20240419 09:42:26.538" endtime="20240419 09:42:28.356"/>
 </test>
 <test id="s1-t3" name="Forget pass with correct email" line="27">
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20240419 08:30:11.408" endtime="20240419 08:30:11.810"/>
+<status status="PASS" starttime="20240419 09:42:28.356" endtime="20240419 09:42:28.764"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Welcome back! Please select method to sign in</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:11.810" endtime="20240419 08:30:11.831"/>
+<status status="PASS" starttime="20240419 09:42:28.771" endtime="20240419 09:42:29.002"/>
 </kw>
 <kw name="Do Forget pass with correct email">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@href='#'][text()='Forgot Password ?']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:11.831" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
-<status status="PASS" starttime="20240419 08:30:11.831" endtime="20240419 08:30:11.889"/>
+<msg timestamp="20240419 09:42:29.007" level="INFO">Clicking element 'xpath=//a[@href='#'][text()='Forgot Password ?']'.</msg>
+<status status="PASS" starttime="20240419 09:42:29.006" endtime="20240419 09:42:29.073"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Reset password link will be sent to your email Please enter your email</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:11.889" endtime="20240419 08:30:11.906"/>
+<status status="PASS" starttime="20240419 09:42:29.073" endtime="20240419 09:42:29.085"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:11.908" level="INFO">Typing text 'testing01@gmail.com' into text field 'xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']'.</msg>
-<status status="PASS" starttime="20240419 08:30:11.907" endtime="20240419 08:30:12.003"/>
+<msg timestamp="20240419 09:42:29.085" level="INFO">Typing text 'testing01@gmail.com' into text field 'xpath=//input[@placeholder='Type your email'][@type='email'][@class='form-control'][@required='']'.</msg>
+<status status="PASS" starttime="20240419 09:42:29.085" endtime="20240419 09:42:29.175"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[text()='Reset Your Password']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240419 08:30:12.003" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
-<status status="PASS" starttime="20240419 08:30:12.003" endtime="20240419 08:30:12.048"/>
+<msg timestamp="20240419 09:42:29.175" level="INFO">Clicking element 'xpath=//button[text()='Reset Your Password']'.</msg>
+<status status="PASS" starttime="20240419 09:42:29.175" endtime="20240419 09:42:29.210"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Reset password have been sent to your email</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240419 08:30:12.048" endtime="20240419 08:30:12.068"/>
+<status status="PASS" starttime="20240419 09:42:29.210" endtime="20240419 09:42:29.220"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <var>${Verify}</var>
 <arg>Reset password have been sent to your email</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<msg timestamp="20240419 08:30:12.079" level="INFO">${Verify} = None</msg>
-<status status="PASS" starttime="20240419 08:30:12.068" endtime="20240419 08:30:12.079"/>
+<msg timestamp="20240419 09:42:29.226" level="INFO">${Verify} = None</msg>
+<status status="PASS" starttime="20240419 09:42:29.220" endtime="20240419 09:42:29.226"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${Verify}'=='True'</arg>
@@ -244,52 +244,52 @@
 <kw name="Log" library="BuiltIn">
 <arg>Failed</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240419 08:30:12.079" level="INFO">Failed</msg>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.079"/>
+<msg timestamp="20240419 09:42:29.226" level="INFO">Failed</msg>
+<status status="PASS" starttime="20240419 09:42:29.226" endtime="20240419 09:42:29.226"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.079"/>
+<status status="PASS" starttime="20240419 09:42:29.226" endtime="20240419 09:42:29.226"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:11.831" endtime="20240419 08:30:12.079"/>
+<status status="PASS" starttime="20240419 09:42:29.002" endtime="20240419 09:42:29.226"/>
 </kw>
 <kw name="Do Screenshot">
 <kw name="Get Current Date" library="DateTime">
 <var>${timestamp}</var>
 <arg>result_format=%d%m%Y_%H%M%S</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240419 08:30:12.079" level="INFO">${timestamp} = 19042024_083012</msg>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.079"/>
+<msg timestamp="20240419 09:42:29.235" level="INFO">${timestamp} = 19042024_094229</msg>
+<status status="PASS" starttime="20240419 09:42:29.235" endtime="20240419 09:42:29.235"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_path}</var>
 <arg>\images</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:12.079" level="INFO">${screenshot_path} = images</msg>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.079"/>
+<msg timestamp="20240419 09:42:29.235" level="INFO">${screenshot_path} = images</msg>
+<status status="PASS" starttime="20240419 09:42:29.235" endtime="20240419 09:42:29.235"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_filename}</var>
 <arg>screenshot_${timestamp}.png</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240419 08:30:12.079" level="INFO">${screenshot_filename} = screenshot_19042024_083012.png</msg>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.079"/>
+<msg timestamp="20240419 09:42:29.235" level="INFO">${screenshot_filename} = screenshot_19042024_094229.png</msg>
+<status status="PASS" starttime="20240419 09:42:29.235" endtime="20240419 09:42:29.235"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${screenshot_path}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.087"/>
+<status status="PASS" starttime="20240419 09:42:29.235" endtime="20240419 09:42:29.239"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <arg>${screenshot_filename}</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240419 08:30:12.288" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_083012.png"&gt;&lt;img src="images/screenshot_19042024_083012.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240419 08:30:12.087" endtime="20240419 08:30:12.288"/>
+<msg timestamp="20240419 09:42:29.482" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="images/screenshot_19042024_094229.png"&gt;&lt;img src="images/screenshot_19042024_094229.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240419 09:42:29.239" endtime="20240419 09:42:29.482"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:12.079" endtime="20240419 08:30:12.288"/>
+<status status="PASS" starttime="20240419 09:42:29.226" endtime="20240419 09:42:29.482"/>
 </kw>
-<status status="PASS" starttime="20240419 08:30:11.408" endtime="20240419 08:30:12.288"/>
+<status status="PASS" starttime="20240419 09:42:28.356" endtime="20240419 09:42:29.491"/>
 </test>
 <doc>Sign up with credential</doc>
-<status status="PASS" starttime="20240419 08:30:03.564" endtime="20240419 08:30:12.292"/>
+<status status="PASS" starttime="20240419 09:42:20.826" endtime="20240419 09:42:29.492"/>
 </suite>
 <statistics>
 <total>
