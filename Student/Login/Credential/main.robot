@@ -1,13 +1,11 @@
 *** Settings ***
-Documentation     Sign up with credential
+Documentation     Login with credential
 Library           SeleniumLibrary
 Library           OperatingSystem
 Library           DateTime
 
 *** Variables ***
 ${URL}=                https://staging.auth.app.ejourney.id/
-${SignUp}=             xpath=//a[text()='Sign up']
-${FullName}=           Raisani aprilia
 ${Email}=              testing01@gmail.com
 ${Password}=           asdasd@123
 ${Incorrect-pass}=     asdasd@1234
