@@ -8,7 +8,7 @@ Library           DateTime
 ${URL}=                https://staging.auth.app.ejourney.id/
 ${SignUp}=             xpath=//a[text()='Sign up']
 ${FullName}=           Raisani aprilia
-${Email}=              testing17@gmail.com
+${Email}=              testing18@gmail.com
 ${BirthDate}=          20040425
 ${Password}=           asdasd@123
 ${ConfirmPass}=        asdasd@123 
